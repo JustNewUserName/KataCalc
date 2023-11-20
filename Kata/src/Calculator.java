@@ -20,28 +20,24 @@ public class Calculator {
             if(inputChar[i]=='+'){
                 symbol ='+';
                 c++;
-                break;
             }
             if(inputChar[i]=='-'){
                 symbol ='-';
                 c++;
-                break;
             }
             if(inputChar[i]=='*'){
                 symbol ='*';
                 c++;
-                break;
             }
             if(inputChar[i]=='/'){
                 symbol ='/';
                 c++;
-                break;
             }
         }
         if(symbol == 0){
             throw new IOException("Строка не является математической операцией");
         }
-        if(c >= 1){
+        if(c > 1){
             throw new IOException("Допускается один оператор счисления.");
         }
         String inputReturn = String.valueOf(inputChar);
